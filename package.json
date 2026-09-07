@@ -1,9 +1,19 @@
 {
   "name": "akashic-llm",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "LLM proxy and query-parser module for Akashic",
   "private": true,
   "license": "AGPL-3.0-or-later",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./lib/llm": "./lib/llm",
+    "./lib/llm/prompt-engine": "./lib/llm/prompt-engine.ts",
+    "./lib/llm/proxy": "./lib/llm/proxy.ts",
+    "./lib/llm/query-parser": "./lib/llm/query-parser.ts",
+    "./app/api/llm/generate": "./app/api/llm/generate/route.ts",
+    "./docs/llm-api": "./docs/llm-api"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
